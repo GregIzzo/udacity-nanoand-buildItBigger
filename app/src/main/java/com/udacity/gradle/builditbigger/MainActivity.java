@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Call GCE async task
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
     }
 
 
@@ -47,15 +45,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Joker myJoker = new Joker();
-        String joke = myJoker.getJoke();
-       // Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
+        //Start Async task to tell joke
 
-        //launch activity, pass joke
-        Intent myIntent = new Intent(this, AppLibraryActivity.class);
-        //add joke
-        myIntent.putExtra("joke",joke );
-        startActivity(myIntent);
+        // Call GCE async task
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
+
+
+
+
 
     }
 
