@@ -34,6 +34,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    flavorDimensions "default"
+    productFlavors {
+        free {
+            applicationId "com.example.android.BuildItBigger.free"
+            dimension "default"
+        }
+        paid {
+            applicationId "com.example.android.BuildItBigger.paid"
+            dimension "default"
+        }
+    }
+
 }
 ext {
     supportLibVersion = '27.1.1'
