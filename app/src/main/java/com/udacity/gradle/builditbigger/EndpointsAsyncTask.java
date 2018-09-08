@@ -30,7 +30,9 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
 
     @Override
     protected String doInBackground(Pair<Context, String>... params) {
+        Log.d(TAG, "Endpoint..doInBackground: Starting");
         if(myApiService == null) {  // Only do this once
+            Log.d(TAG, "Endpoint..doInBackground: myApiService is null, so starting");
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
                     // options for running against local devappserver
@@ -53,9 +55,12 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
 
         try {
            ///Below changed to get a joke
+            Log.d(TAG, "Endpoint..doInBackground: about to call sayHi");
+
             return myApiService.sayHi(name).execute().getData();
 
         } catch (IOException e) {
+            Log.d(TAG, "Endpoint..doInBackground: sayHi call failed message:" + e.getMessage());
             return e.getMessage();
         }
     }
