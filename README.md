@@ -1,8 +1,6 @@
-# Gradle for Android and Java Final Project
+## Author's note
 
-## Athor's note
-
-The starting point for this project included the readme text below (Starting from "Why this Project"). My version of the project doesn't include the optional tasks. 
+The starting point for this project included the readme text below (Starting from "Gradle for Android and Java Final Project"). My version of the project doesn't include the optional tasks. 
 
 ## Attributions
 
@@ -18,7 +16,14 @@ Helpful links and pages I used to get this project built:
    + <https://developer.android.com/training/testing/ui-testing/espresso-testing>
    + <https://developer.android.com/training/testing/ui-testing/espresso-testing#java>
    
+1. Different "flavors" and "flavor dimension" : 
+
+   + <https://developer.android.com/studio/build/build-variants?utm_source=android-studio#flavor-dimensions>
+   + <https://developer.android.com/studio/build/build-variants#sourcesets>
+
+1. Where Gradle expects to find files based on build type and flavor : <https://developer.android.com/studio/build/build-variants?utm_source=android-studio#flavor-dimensions>
    
+# Gradle for Android and Java Final Project
 
 In this project, you will create an app with multiple flavors that uses
 multiple libraries and Google Cloud Endpoints. The finished app will consist
