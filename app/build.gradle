@@ -56,6 +56,11 @@ android {
         }
     }
 
+    sourceSets {
+        free {
+            manifest.srcFile 'src/free/AndroidManifest.xml'
+        }
+    }
 }
 ext {
     supportLibVersion = '27.1.1'
@@ -67,7 +72,7 @@ dependencies {
     //  implementation "com.android.support:support-media-compat:${supportLibVersion}"
     implementation "com.android.support:customtabs:${supportLibVersion}"
     implementation "com.android.support:support-v4:${supportLibVersion}"
-    implementation 'com.google.android.gms:play-services-ads:15.0.1'
+    freeImplementation 'com.google.android.gms:play-services-ads:15.0.1'
     implementation 'com.google.api-client:google-api-client:1.23.0'
     implementation 'com.google.http-client:google-http-client-android:1.23.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.1'
